@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Manutenção Elétrica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="report-container">
+        <header class="header">
+            <div class="brand-block">
+                <div class="logo">
+                    <img src="logo_stratos.png" alt="Stratos">
+                </div>
+                <div class="title">
+                    <p class="eyebrow">Relatório de Atividades</p>
+                    <textarea class="title-input title-main" rows="2" aria-label="Título do relatório">Relatório de Manutenção Elétrica</textarea>
+                    <input class="title-input title-sub" type="text" value="Equipe Subestação Mina" aria-label="Subtítulo do relatório">
+                </div>
+            </div>
+            <div class="header-meta">
+                <label class="meta-pill meta-pill-input">
+                    <span>Supervisão</span>
+                    <input type="text" value="Supervisão" aria-label="Supervisão">
+                </label>
+                <label class="meta-pill meta-pill-input">
+                    <span>Turma</span>
+                    <input type="text" value="B" aria-label="Turma">
+                </label>
+                <label class="meta-pill meta-pill-input">
+                    <span>Turno</span>
+                    <input type="text" value="A" aria-label="Turno">
+                </label>
+                <label class="meta-pill meta-pill-input">
+                    <span>Data</span>
+                    <input type="date" value="2026-05-14" aria-label="Data">
+                </label>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="report-section">
+                <div class="section-header">
+                    <h3>Atividades executadas</h3>
+                    <p>Escreva aqui o que foi realizado no período.</p>
+                </div>
+                <div class="activity-editor">
+                    <label class="field-block">
+                        <span>Descrição do relatório</span>
+                        <textarea rows="7" placeholder="Descreva as atividades, testes, inspeções, ocorrências e resultados..."></textarea>
+                    </label>
+                    <div class="activity-grid">
+                        <label class="field-block">
+                            <span>Local</span>
+                            <input type="text" placeholder="Ex.: Painel principal / Subestação">
+                        </label>
+                        <label class="field-block">
+                            <span>Veículo</span>
+                            <input type="text" placeholder="Ex.: Pátio, garagem ou estacionamento">
+                        </label>
+                        <label class="field-block">
+                            <span>Responsável</span>
+                            <input type="text" placeholder="Nome do responsável">
+                        </label>
+                        <label class="field-block">
+                            <span>Observações</span>
+                            <input type="text" placeholder="Observações gerais">
+                        </label>
+                        <label class="field-block">
+                            <span>Pendência</span>
+                            <textarea class="pendencia-field" rows="4" placeholder="Pendências encontradas ou pendentes"></textarea>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="report-section">
+                <div class="section-header">
+                    <h3>Equipe responsável</h3>
+                    <p>Edite os membros e adicione quantas linhas precisar.</p>
+                </div>
+                <div class="table-toolbar">
+                    <button type="button" id="add-team-row">Adicionar membro</button>
+                </div>
+                <table class="team-table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Matrícula</th>
+                            <th>Horário</th>
+                            <th>Status</th>
+                            <th class="action-column">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="equipe-body">
+                        <tr>
+                            <td><input type="text" placeholder="Nome do membro"></td>
+                            <td><input type="text" placeholder="Matrícula"></td>
+                            <td><input type="text" placeholder="Horário"></td>
+                            <td>
+                                <select class="status-select" aria-label="Status do membro">
+                                    <option value="">Opcional</option>
+                                    <option value="atestado">Atestado</option>
+                                    <option value="presente">Presente</option>
+                                    <option value="ferias">Férias</option>
+                                    <option value="ausente">Ausente</option>
+                                </select>
+                            </td>
+                            <td class="action-column"><button type="button" class="remove-row">Remover</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+
+        <footer class="footer-note">
+            <p>Documento preparado para impressão e consulta interna.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
